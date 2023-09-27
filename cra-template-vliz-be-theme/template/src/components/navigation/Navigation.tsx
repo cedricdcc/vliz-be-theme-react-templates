@@ -4,7 +4,7 @@ import React from 'react';
 export default function Navigation() {
     //import navigation items from json file
     const navigationItems = require('../../data/navigation.json');
-
+    const maindata = require('../../data/main_site_data.json');
     console.log(navigationItems);
 
     return (
@@ -20,7 +20,7 @@ export default function Navigation() {
             <div class="region region-header-branding">
                 <div id="block-vlizbase-site-branding" class="block block-system block-system-branding-block">
                 <a href="/" rel="home" title="">
-                    Img here
+                    <img loading="lazy" src={maindata.logo} alt="VLIZ" title="VLIZ" width="115px"/>
                 </a>
                 </div>
             </div>

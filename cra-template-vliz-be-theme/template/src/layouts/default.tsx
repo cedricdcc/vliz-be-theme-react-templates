@@ -4,7 +4,8 @@ import FooterMain from '../components/footer/main';
 import MobileOverlay from '../components/mobile-overlay/main';
 import BannerMain from '../components/banner/main';
 
-const DefaultLayout: React.FC = ({ children }) => (
+const DefaultLayout: React.FC = ({ children }) => 
+(
     <>
     <a href="#main-content" class="visually-hidden focusable skip-link">
         Skip and go to main content

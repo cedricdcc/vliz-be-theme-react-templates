@@ -1,16 +1,24 @@
 //this component will contain the main banner
-
 import React from 'react';
+let bannerimage = require('../../assets/media/img/cover/fedora29.jpg');
 
 
-export default function BannerMain(props: any) {
+export default function BannerMain() {
 
-    //set variables based on given props
-    let title = props.title ? props.title : "Give a prop title";
-    let description = props.description ? props.description : "Give a prop description";
-    let image = props.image ? props.image : "";
-    let url = props.url ? props.url : "";
-    let url_text = props.url_text ? props.url_text : "Give a prop url_text";
+    let bannerdata = require('../../data/main_site_data.json')
+
+    //set variables based on given bannerdata
+    let title = bannerdata.title ? bannerdata.title : "Give a prop title";
+    let description = bannerdata.description ? bannerdata.description : "Give a prop description";
+
+    let image = bannerimage;
+
+    if(bannerdata.image) {
+        //perform react lazy loading 
+        image =bannerdata.image //TODO: Fix the issue where I can't load in an image
+    }
+    let url = bannerdata.url ? bannerdata.url : "";
+    let url_text = bannerdata.url_text ? bannerdata.url_text : "Give a prop url_text";
 
     return (
     <>
